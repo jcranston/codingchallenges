@@ -7,8 +7,6 @@ public abstract class FindFirstMissingPositive {
         if (arr.length == 0) return 1;
         int posArraySize = seggregatePositives(arr);
 
-        System.out.println(arr);
-
         for (int i = 0; i < posArraySize; i++) {
             int x = abs(arr[i]);
             if (x - 1 < posArraySize && arr[x - 1] > 0) {
