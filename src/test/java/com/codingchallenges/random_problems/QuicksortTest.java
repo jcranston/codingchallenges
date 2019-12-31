@@ -45,4 +45,12 @@ public class QuicksortTest {
 
         assertArrayEquals(arr, new int[] { });
     }
+
+    @Test
+    public void testQuicksortAlreadySorted() {
+        int[] arr = { 1, 2, 3, 4, 5 };
+        quicksort(arr);
+
+        assertArrayEquals(arr, new int[] { 1, 2, 3, 4, 5 });
+    }
 }

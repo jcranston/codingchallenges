@@ -1,6 +1,5 @@
 package main.java.com.codingchallenges.random_problems;
 
-
 public abstract class Quicksort {
     public static void quicksort(int[] arr) {
         if (arr.length > 0 && arr != null) {
