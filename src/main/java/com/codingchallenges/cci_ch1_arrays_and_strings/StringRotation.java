@@ -35,6 +35,9 @@ public abstract class StringRotation {
      * Solution: check if s2 is a substring of s1 concatenated with itself.
      */
     public static boolean isStringRotation(String s1, String s2) {
-        return isSubstring(s1, s2 + s2);
+        if (s1.length() == s2.length() && s1.length() > 0) {
+            return isSubstring(s1, s2 + s2);
+        }
+        return false;
     }
 }
