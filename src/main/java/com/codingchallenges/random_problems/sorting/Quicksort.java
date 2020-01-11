@@ -1,7 +1,8 @@
-package main.java.com.codingchallenges.random_problems;
+package main.java.com.codingchallenges.random_problems.sorting;
 
-public abstract class Quicksort {
-    public static void quicksort(int[] arr) {
+public class Quicksort implements SortingAlgorithm {
+    @Override
+    public void sort(int[] arr) {
         if (arr.length > 0 && arr != null) {
             quicksortImpl(arr, 0, arr.length - 1);
         }

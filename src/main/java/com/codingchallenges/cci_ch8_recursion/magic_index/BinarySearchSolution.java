@@ -26,7 +26,7 @@ public class BinarySearchSolution implements MagicIndex {
         if (midIdx < arr[midIdx]) {
             return recGetMagicIdxDistinctIntegers(arr, lowerIdx, midIdx);
         } else {
-            return recGetMagicIdxDistinctIntegers(arr, midIdx, upperIdx);
+            return recGetMagicIdxDistinctIntegers(arr, midIdx + 1, upperIdx);
         }
     }
 }
