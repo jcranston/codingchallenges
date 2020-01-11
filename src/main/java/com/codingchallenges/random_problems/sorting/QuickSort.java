@@ -1,6 +1,8 @@
 package main.java.com.codingchallenges.random_problems.sorting;
 
-public class Quicksort implements SortingAlgorithm {
+import static main.java.com.codingchallenges.common.Swap.swap;
+
+public class QuickSort implements SortingAlgorithm {
     @Override
     public void sort(int[] arr) {
         if (arr.length > 0 && arr != null) {
@@ -34,11 +36,5 @@ public class Quicksort implements SortingAlgorithm {
             }
         }
         return idxLower;
-    }
-
-    private static void swap(int[] arr, int i, int j) {
-        int tmp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = tmp;
     }
 }

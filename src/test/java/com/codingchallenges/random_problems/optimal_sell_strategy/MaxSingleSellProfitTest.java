@@ -15,9 +15,9 @@ public class MaxSingleSellProfitTest {
     @BeforeClass
     public static void setUp() {
         algorithms = new MaxSingleSellProfit[]{
-//            new BruteForceSolution(),
-            new SortedSolution(),
-//            new DivideAndConquerSolution(),
+            new BruteForceSolution(),
+//            new SortedSolution(),
+            new DivideAndConquerSolution(),
             // new OptimizedDivideAndConquerSolution()
         };
     }

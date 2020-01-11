@@ -1,9 +1,6 @@
 package test.java.com.codingchallenges.random_problems.sorting;
 
-import main.java.com.codingchallenges.random_problems.sorting.InsertionSort;
-import main.java.com.codingchallenges.random_problems.sorting.MergeSort;
-import main.java.com.codingchallenges.random_problems.sorting.Quicksort;
-import main.java.com.codingchallenges.random_problems.sorting.SortingAlgorithm;
+import main.java.com.codingchallenges.random_problems.sorting.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -16,9 +13,12 @@ public class SortingAlgorithmTest {
     @BeforeClass
     public static void setUp() {
         algorithms = new SortingAlgorithm[]{
-            new Quicksort(),
+            new BubbleSort(),
+            new OptimizedBubbleSort(),
             new InsertionSort(),
-            new MergeSort()
+            new SelectionSort(),
+            new MergeSort(),
+            new QuickSort(),
         };
     }
 
@@ -73,6 +73,24 @@ public class SortingAlgorithmTest {
             int[] arr = { 1, 2, 3, 4, 5 };
             alg.sort(arr);
             assertArrayEquals(arr, new int[] { 1, 2, 3, 4, 5 });
+        });
+    }
+
+    @Test
+    public void testAlmostSortedExceptLastTwo() {
+        Arrays.stream(algorithms).forEach(alg -> {
+            int[] arr = { 1, 2, 3, 4, 5, 6, 7, 9, 8 };
+            alg.sort(arr);
+            assertArrayEquals(arr, new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+        });
+    }
+
+    @Test
+    public void testAlmostSortedExceptFirstTwo() {
+        Arrays.stream(algorithms).forEach(alg -> {
+            int[] arr = { 2, 1, 3, 4, 5, 6, 7, 8, 9 };
+            alg.sort(arr);
+            assertArrayEquals(arr, new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
         });
     }
 }
