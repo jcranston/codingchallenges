@@ -5,8 +5,10 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.concurrent.ThreadLocalRandom;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertTrue;
 
 public class SortingAlgorithmTest {
     private static SortingAlgorithm[] algorithms = null;
@@ -91,6 +93,21 @@ public class SortingAlgorithmTest {
             int[] arr = { 2, 1, 3, 4, 5, 6, 7, 8, 9 };
             alg.sort(arr);
             assertArrayEquals(arr, new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+        });
+    }
+
+    @Test
+    public void testSortingVeryLargeArray() {
+        int n = 1000;
+        int[] arr = new int[n]; // very large array
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = ThreadLocalRandom.current().nextInt(n);
+        }
+        Arrays.stream(algorithms).forEach(alg -> {
+            alg.sort(arr);
+            for (int i = 0; i < n - 1; i++) {
+                assertTrue(arr[i] <= arr[i + 1]);
+            }
         });
     }
 }
