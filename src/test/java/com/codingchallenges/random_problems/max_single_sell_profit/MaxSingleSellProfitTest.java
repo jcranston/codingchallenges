@@ -1,6 +1,6 @@
-package test.java.com.codingchallenges.random_problems.optimal_sell_strategy;
+package test.java.com.codingchallenges.random_problems.max_single_sell_profit;
 
-import main.java.com.codingchallenges.random_problems.optimal_sell_strategy.*;
+import main.java.com.codingchallenges.random_problems.max_single_sell_profit.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

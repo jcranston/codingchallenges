@@ -1,6 +1,4 @@
-package main.java.com.codingchallenges.random_problems.optimal_sell_strategy;
-
-import javafx.util.Pair;
+package main.java.com.codingchallenges.random_problems.max_single_sell_profit;
 
 import java.util.Comparator;
 import java.util.List;

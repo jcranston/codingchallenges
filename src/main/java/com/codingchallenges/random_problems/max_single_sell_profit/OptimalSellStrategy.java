@@ -1,4 +1,4 @@
-package main.java.com.codingchallenges.random_problems.optimal_sell_strategy;
+package main.java.com.codingchallenges.random_problems.max_single_sell_profit;
 
 public class OptimalSellStrategy {
     public int buyDay;
